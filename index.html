@@ -131,13 +131,14 @@
       }
       #printBand .np-content{
         display:grid !important;
-        grid-template-columns: 28mm 1fr !important;
+        grid-template-columns: 9mm 28mm 1fr 9mm !important;
         align-items:center !important;
-        column-gap:4mm !important;
         width:100% !important;
-        padding:0 9mm !important;
+        padding:0 !important;
         height:30mm !important;
       }
+      #printBand .np-content > .addr{ grid-column: 2 / 3 !important; }
+      #printBand .np-content > .names{ grid-column: 3 / 4 !important; }
       #printBand .addr{
         display:flex !important;
         flex-direction:column !important;
