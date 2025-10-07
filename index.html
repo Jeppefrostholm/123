@@ -55,7 +55,7 @@
     @media print{
       @page{
         size:A4 portrait;
-        margin:10mm;
+        margin:0mm;
       }
       *{
         box-sizing:border-box !important;
@@ -129,7 +129,7 @@
         overflow:hidden !important;
         margin:0 auto !important;
       }
-      :root{ --print-left-mm:9mm; --print-addr-mm:28mm; }
+      :root{ --print-left-mm:2mm; --print-addr-mm:28mm; }
       #printBand .np-content{
         display:grid !important;
         grid-template-columns: var(--print-left-mm) var(--print-addr-mm) 1fr var(--print-left-mm) !important;
