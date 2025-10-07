@@ -129,13 +129,17 @@
         overflow:hidden !important;
         margin:0 auto !important;
       }
+      :root{ --print-left-mm:9mm; --print-addr-mm:28mm; }
       #printBand .np-content{
         display:grid !important;
-        grid-template-columns: 9mm 28mm 1fr 9mm !important;
+        grid-template-columns: var(--print-left-mm) var(--print-addr-mm) 1fr var(--print-left-mm) !important;
         align-items:center !important;
         width:100% !important;
         padding:0 !important;
         height:30mm !important;
+      }
+      @supports (-webkit-touch-callout: none){
+        :root{ --print-left-mm:6mm; }
       }
       #printBand .np-content > .addr{ grid-column: 2 / 3 !important; }
       #printBand .np-content > .names{ grid-column: 3 / 4 !important; }
